@@ -1,0 +1,13 @@
+*.fs.js
+.fable/
+.fake/
+.ionide/
+node_modules/
+paket-files/
+publish/
+bin/
+obj/
+persisted/
+secret/
+deploy.zip
+yarn-error.log
