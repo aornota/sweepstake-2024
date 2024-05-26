@@ -1,7 +1,5 @@
-*.fs.js
-.fable/
 .fake/
-.ionide/
+.farmer/
 node_modules/
 paket-files/
 publish/
@@ -11,3 +9,4 @@ persisted/
 secret/
 deploy.zip
 yarn-error.log
+*.fs.js

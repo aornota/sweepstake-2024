@@ -21,10 +21,10 @@ open System.IO
 
 // TODO-NMB-2024: Prevent delete for subsequent deployment to Azure...
 
-let private deleteExistingUsersEvents = ifDebug false true // note: should *not* generally set to true for Release (and only with caution for Debug!)
-let private deleteExistingSquadsEvents = ifDebug false true // note: should *not* generally set to true for Release (and only with caution for Debug!)
-let private deleteExistingFixturesEvents = ifDebug false true // note: should *not* generally set to true for Release (and only with caution for Debug!)
-let private deleteExistingDraftsEvents = ifDebug false true // note: should *not* generally set to true for Release (and only with caution for Debug!)
+let private deleteExistingUsersEvents = ifDebug false false // note: should *not* generally set to true for Release (and only with caution for Debug!)
+let private deleteExistingSquadsEvents = ifDebug false false // note: should *not* generally set to true for Release (and only with caution for Debug!)
+let private deleteExistingFixturesEvents = ifDebug false false // note: should *not* generally set to true for Release (and only with caution for Debug!)
+let private deleteExistingDraftsEvents = ifDebug false false // note: should *not* generally set to true for Release (and only with caution for Debug!)
 
 let private log category = (Host, category) |> consoleLogger.Log
 
