@@ -26,25 +26,21 @@ let private renderStandings (useDefaultTheme, users:(UserId * UserName) list, sq
             let payout =
                 let paraPayout = { paraDefaultSmallest with ParaAlignment = RightAligned }
                 let payout =
-                    // TODO-NMB-2024: Confirm payouts...
                     match rank, tieCount with
-                    | 1, 1 -> 70. |> Some
-                    | 1, 2 -> 55. |> Some
-                    | 1, 3 -> 43.33 |> Some
-                    | 1, 4 -> 35. |> Some
+                    | 1, 1 -> 50. |> Some
+                    | 1, 2 -> 40. |> Some
+                    | 1, 3 -> 33.33 |> Some
+                    | 1, 4 -> 25. |> Some
                     | 1, _ -> None // note: unlikely to happen
-                    | 2, 1 -> 40. |> Some
-                    | 2, 2 -> 30. |> Some
-                    | 2, 3 -> 23.33 |> Some
-                    | 2, 4 -> 17.5 |> Some
+                    | 2, 1 -> 30. |> Some
+                    | 2, 2 -> 25. |> Some
+                    | 2, 3 -> 16.66 |> Some
+                    | 2, 4 -> 12.5 |> Some
                     | 2, _ -> None // note: unlikely to happen
                     | 3, 1 -> 20. |> Some
-                    | 3, 2 -> 15. |> Some
-                    | 3, 3 -> 10. |> Some
+                    | 3, 2 -> 10. |> Some
+                    | 3, 3 -> 6.66 |> Some
                     | 3, _ -> None // note: unlikely to happen
-                    | 4, 1 -> 10. |> Some
-                    | 4, 2 -> 5. |> Some
-                    | 4, _ -> None // note: unlikely to happen
                     | rank, 1 when rank = userCount -> 10. |> Some
                     | rank, 2 when rank = userCount - 1 -> 5. |> Some
                     | rank, n when rank = userCount - (n - 1) -> None // note: unlikely to happen
